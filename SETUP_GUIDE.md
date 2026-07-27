@@ -82,6 +82,11 @@ git commit -m "Trigger pipeline"
 git push
 ```
 
+The workflow is set to `workflow_dispatch` (manual trigger only — it will not run automatically on push). To run it:
+
+- **Via GitHub UI**: go to your repo's **Actions** tab → select "Build code, run unit test, run SAST, SCA, DAST security scans" in the left sidebar → click **Run workflow** → choose the branch → **Run workflow**.
+- **Via GitHub CLI**: `gh workflow run complete-workflow.yml --ref master` (swap `master` for your branch name).
+
 Then watch it run under your repo's **Actions** tab on GitHub.
 
 ---
